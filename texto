@@ -1,0 +1,234 @@
+# Do pêndulo simples ao caos: física, matemática e previsibilidade
+
+Antes de falar sobre erro de previsão, efeito borboleta ou entropia, é importante entender o sistema físico usado nos experimentos: o pêndulo.
+
+O pêndulo é um dos sistemas mais antigos e estudados da física. Apesar de parecer simples, ele ilustra uma transição profunda entre dois mundos da ciência:
+
+1) sistemas previsíveis e regulares
+2) sistemas determinísticos, mas praticamente imprevisíveis
+
+Essa transição aparece quando saímos do pêndulo simples e chegamos ao pêndulo duplo.
+
+---
+
+# O pêndulo simples
+
+O pêndulo simples consiste em uma massa presa a uma haste ou fio de comprimento L, oscilando sob a ação da gravidade.
+
+Ele foi estudado intensamente desde o século XVII. Um dos nomes mais associados ao pêndulo é Galileo Galilei, que observou que o período de oscilação de pequenos ângulos é aproximadamente constante. Mais tarde, Christiaan Huygens desenvolveu a teoria matemática do pêndulo e utilizou o sistema para construir relógios de alta precisão.
+
+Fisicamente, o sistema possui apenas uma variável dinâmica principal: o ângulo θ que o fio faz com a vertical.
+
+Aplicando a segunda lei de Newton para movimento rotacional:
+
+τ = Iα
+
+onde:
+
+τ = torque
+I = momento de inércia
+α = aceleração angular
+
+O torque gerado pela gravidade é:
+
+τ = -mgL sin(θ)
+
+O momento de inércia da massa pontual é:
+
+I = mL²
+
+Substituindo:
+
+mL² θ'' = -mgL sin(θ)
+
+Simplificando:
+
+θ'' + (g/L) sin(θ) = 0
+
+Essa é a equação diferencial do pêndulo simples.
+
+---
+
+# A aproximação linear
+
+Quando os ângulos são pequenos, podemos usar a aproximação:
+
+sin(θ) ≈ θ
+
+Isso transforma a equação em:
+
+θ'' + (g/L) θ = 0
+
+Essa é uma equação linear.
+
+Sua solução é:
+
+θ(t) = A cos(ωt + φ)
+
+onde:
+
+ω = √(g/L)
+
+Ou seja, o sistema vira um oscilador harmônico simples.
+
+Esse regime é altamente previsível:
+
+- movimento periódico
+- comportamento regular
+- pequenas mudanças iniciais geram pequenas mudanças futuras
+
+Esse tipo de sistema é típico da física clássica tradicional.
+
+---
+
+# O pêndulo duplo
+
+O pêndulo duplo consiste em dois pêndulos conectados em série:
+
+massa 1 ligada ao teto  
+massa 2 ligada à massa 1
+
+Agora temos duas variáveis principais:
+
+θ₁ = ângulo do primeiro braço  
+θ₂ = ângulo do segundo braço  
+
+e também duas velocidades angulares:
+
+ω₁
+ω₂
+
+O sistema passa a ter quatro dimensões no espaço de fase:
+
+(θ₁, θ₂, ω₁, ω₂)
+
+As equações de movimento deixam de ser simples.
+
+Elas passam a ser:
+
+- não lineares
+- acopladas
+- dependentes umas das outras
+
+A aceleração angular de cada pêndulo depende de:
+
+- θ₁
+- θ₂
+- ω₁
+- ω₂
+- termos trigonométricos
+- produtos entre velocidades
+
+Isso cria um sistema altamente complexo.
+
+---
+
+# Não linearidade
+
+No pêndulo simples linearizado:
+
+θ'' + (g/L)θ = 0
+
+No pêndulo duplo aparecem termos como:
+
+sin(θ₁)
+sin(θ₂)
+cos(θ₂ − θ₁)
+ω₁²
+ω₂²
+ω₁ω₂
+
+Esses termos tornam o sistema não linear.
+
+Sistemas não lineares podem apresentar fenômenos que não aparecem em sistemas lineares, como:
+
+- bifurcações
+- comportamento irregular
+- caos determinístico
+
+---
+
+# Sensibilidade às condições iniciais
+
+Um sistema caótico não é aleatório.
+
+Ele é completamente determinístico: as equações são fixas e conhecidas.
+
+Porém ele possui uma propriedade chamada:
+
+sensibilidade às condições iniciais.
+
+Isso significa que duas trajetórias iniciadas com condições quase idênticas podem divergir rapidamente.
+
+Por exemplo:
+
+trajetória A:
+θ₁ = 1.0000
+
+trajetória B:
+θ₁ = 1.0001
+
+A diferença inicial é praticamente imperceptível.
+
+Mas ao longo do tempo:
+
+|θA(t) − θB(t)| cresce rapidamente.
+
+Esse fenômeno ficou conhecido como:
+
+efeito borboleta
+
+popularizado pelo meteorologista Edward Lorenz na década de 1960.
+
+A ideia central é que pequenas incertezas iniciais podem crescer até tornar previsões de longo prazo impossíveis.
+
+---
+
+# Determinismo não implica previsibilidade
+
+Durante séculos, a física clássica foi associada a uma visão extremamente otimista de previsibilidade.
+
+Pierre-Simon Laplace formulou essa ideia de forma famosa no século XIX:
+
+se uma inteligência conhecesse todas as posições e velocidades das partículas do universo, poderia prever completamente o futuro.
+
+Essa ideia ficou conhecida como:
+
+o demônio de Laplace.
+
+O estudo de sistemas caóticos mostrou que essa visão é limitada.
+
+Mesmo em sistemas determinísticos simples, como o pêndulo duplo:
+
+- pequenas incertezas iniciais
+- erros numéricos
+- imprecisão de medição
+
+crescem rapidamente.
+
+Isso cria um limite prático para a previsão.
+
+---
+
+# O pêndulo como laboratório de previsibilidade
+
+Por isso o pêndulo duplo é frequentemente usado como exemplo clássico de caos determinístico.
+
+Ele é:
+
+- fisicamente simples
+- matematicamente bem definido
+- visualmente intuitivo
+- dinamicamente complexo
+
+Neste projeto usamos o pêndulo como um pequeno laboratório computacional para investigar:
+
+- erro de modelos simplificados
+- divergência entre trajetórias
+- horizonte de previsibilidade
+- dispersão dos estados do sistema
+- conservação de energia nas simulações
+
+A ideia central não é provar que o sistema é caótico — isso já é bem conhecido na física.
+
+O objetivo é explorar como diferentes métricas de previsão e informação se comportam quando aplicadas a um sistema determinístico altamente sensível às condições iniciais.
