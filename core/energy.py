@@ -47,3 +47,11 @@ def double_pendulum_energy(theta1, omega1, theta2, omega2,
     potential = m1 * g * (y1 + L1) + m2 * g * (y2 + L1 + L2)
 
     return kinetic + potential
+
+def energy_drift(E):
+
+    E0 = E[0]
+
+    drift = np.max(np.abs(E - E0)) / np.abs(E0)
+
+    return drift
