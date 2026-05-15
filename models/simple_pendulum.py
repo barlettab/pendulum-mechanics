@@ -11,20 +11,23 @@ Características:
 
 import numpy as np
 
-def simulate_simple_pendulum(theta0, omega0, L=1, g=9.81, dt=0.02, steps=3000):
+def simulate_simple_pendulum(theta0, omega0, steps=3000, dt=0.005, return_omega=False):
 
-    theta = theta0
-    omega = omega0
+    g = 9.81
+    L = 1
 
-    theta_series = []
+    theta = np.zeros(steps)
+    omega = np.zeros(steps)
 
-    for _ in range(steps):
+    theta[0] = theta0
+    omega[0] = omega0
 
-        alpha = -(g / L) * np.sin(theta)
+    for i in range(steps - 1):
 
-        omega += alpha * dt
-        theta += omega * dt
+        omega[i+1] = omega[i] - (g/L) * np.sin(theta[i]) * dt
+        theta[i+1] = theta[i] + omega[i+1] * dt
 
-        theta_series.append(theta)
-
-    return np.array(theta_series)
+    if return_omega:
+        return theta, omega
+    else:
+        return theta
