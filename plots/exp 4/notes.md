@@ -1,0 +1,3 @@
+Para quantificar o nível de caoticidade do pêndulo duplo, calculamos o Expoente de Lyapunov ($\lambda$) através de um ajuste linear do logaritmo da distância angular em sua fase inicial de propagação. O valor positivo obtido de $\lambda = 0.0009$ age como uma prova matemática do caos determinístico, indicando que o horizonte de previsibilidade confiável do sistema é severamente limitado pelo crescimento exponencial inevitável de qualquer ruído de medição.
+
+Esse valor está sendo aplicado como expoente de uma base natural (l ($e \approx 2.718$), ditando o ritmo de uma potência matemática ao longo de cada passo de tempo ($t$):$$d(t) \approx d_0 \cdot e^{0.0009 \cdot t}$$
