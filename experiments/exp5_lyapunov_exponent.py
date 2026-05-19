@@ -16,11 +16,11 @@ from core.divergence import divergence
 # carregar dados do exp4
 # ==========================
 
-theta1_A = np.load("data/exp3/theta1_A.npy")
-theta2_A = np.load("data/exp3/theta2_A.npy")
+theta1_A = np.load("data/exp4/theta1_A.npy")
+theta2_A = np.load("data/exp4/theta2_A.npy")
 
-theta1_B = np.load("data/exp3/theta1_B.npy")
-theta2_B = np.load("data/exp3/theta2_B.npy")
+theta1_B = np.load("data/exp4/theta1_B.npy")
+theta2_B = np.load("data/exp4/theta2_B.npy")
 
 # ==========================
 # calcular divergência
@@ -58,7 +58,7 @@ print("Expoente de Lyapunov estimado:", lyapunov)
 # salvar valor
 # ==========================
 
-with open("data/exp4/lyapunov.txt", "w") as f:
+with open("data/exp5/lyapunov.txt", "w") as f:
     f.write(f"Lyapunov exponent: {lyapunov}")
 
 # ==========================
@@ -83,7 +83,7 @@ plt.title("Estimativa do Expoente de Lyapunov")
 plt.legend()
 
 plt.savefig(
-    "plots/exp4/lyapunov_estimation.png",
+    "plots/exp5/lyapunov_estimation.png",
     dpi=300,
     bbox_inches="tight"
 )
