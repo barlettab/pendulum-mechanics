@@ -17,7 +17,7 @@ from core.entropy import entropy
 # ==========================
 # pasta do experimento
 # ==========================
-os.makedirs("data/exp5", exist_ok=True)
+os.makedirs("data/exp7", exist_ok=True)
 
 # ==========================
 # simulações
@@ -38,11 +38,11 @@ print("Entropy double:", entropy_double)
 # ==========================
 # salvar dados
 # ==========================
-np.save("data/exp6/simple_series.npy", simple)
-np.save("data/exp6/double_series.npy", double)
+np.save("data/exp7/simple_series.npy", simple)
+np.save("data/exp7/double_series.npy", double)
 
-np.save("data/exp6/entropy_simple.npy", np.array([entropy_simple]))
-np.save("data/exp6/entropy_double.npy", np.array([entropy_double]))
+np.save("data/exp7/entropy_simple.npy", np.array([entropy_simple]))
+np.save("data/exp7/entropy_double.npy", np.array([entropy_double]))
 
 os.makedirs("plots/exp6", exist_ok=True)
 
@@ -135,7 +135,7 @@ for i, v in enumerate(values):
 plt.tight_layout()
 
 plt.savefig(
-    "plots/exp6/phase_space_entropy.png",
+    "plots/exp7/phase_space_entropy.png",
     dpi=300,
     bbox_inches="tight"
 )
