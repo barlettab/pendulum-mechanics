@@ -77,8 +77,8 @@ for h in range(10, n_pontos):
 horizontes_tempo = tempo[10:]
 
 # Salvar dados brutos
-np.save("data/exp6/scores_simple.npy", scores_simple)
-np.save("data/exp6/scores_double.npy", scores_double)
+np.save("data/exp7/scores_simple.npy", scores_simple)
+np.save("data/exp7/scores_double.npy", scores_double)
 
 # =========================================================================
 # 4. PLOTAGEM DO GRÁFICO DEFINITIVO DO ARTIGO
@@ -109,7 +109,7 @@ ax.text(9.5, 0.12, "Previsibilidade\nDeterminística", color='#1a5f7a', fontsize
 ax.legend(loc="upper left", frameon=False)
 plt.tight_layout()
 
-plt.savefig("plots/exp6/predictability_comparison.png", dpi=300, bbox_inches="tight")
+plt.savefig("plots/exp7/predictability_comparison.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 print("✓ Novo gráfico gerado. Agora ele prova matematicamente a perda de previsibilidade!")
