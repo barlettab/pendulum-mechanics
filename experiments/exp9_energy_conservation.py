@@ -14,8 +14,8 @@ from core.energy import simple_pendulum_energy, double_pendulum_energy, energy_d
 # ==========================
 # SETUP
 # ==========================
-os.makedirs("data/exp7", exist_ok=True)
-os.makedirs("plots/exp7", exist_ok=True)
+os.makedirs("data/exp9", exist_ok=True)
+os.makedirs("plots/exp9", exist_ok=True)
 
 steps = 3000
 dt = 0.005
@@ -86,8 +86,8 @@ E_double_norm = E_double / E_double[0]
 # ==========================
 # SALVAR DADOS
 # ==========================
-np.save("data/exp7/E_simple.npy", E_simple)
-np.save("data/exp7/E_double.npy", E_double)
+np.save("data/exp9/E_simple.npy", E_simple)
+np.save("data/exp9/E_double.npy", E_double)
 
 
 # ==========================
@@ -121,7 +121,7 @@ axs[1].grid(alpha=0.3)
 plt.tight_layout()
 
 plt.savefig(
-    "plots/exp7/energy_conservation.png",
+    "plots/exp9/energy_conservation.png",
     dpi=300,
     bbox_inches="tight"
 )
