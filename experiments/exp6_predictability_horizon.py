@@ -22,8 +22,8 @@ dt = 0.005
 # ==========================
 # criar pastas
 # ==========================
-os.makedirs("data/exp5", exist_ok=True)
-os.makedirs("plots/exp5", exist_ok=True)
+os.makedirs("data/exp6", exist_ok=True)
+os.makedirs("plots/exp6", exist_ok=True)
 
 # ==========================
 # simulações
@@ -63,14 +63,14 @@ scores_double = np.array(scores_double)
 # ==========================
 # salvar dados
 # ==========================
-np.save("data/exp5/theta_simple.npy", theta_simple)
-np.save("data/exp5/theta_double.npy", theta_double)
+np.save("data/exp6/theta_simple.npy", theta_simple)
+np.save("data/exp6/theta_double.npy", theta_double)
 
-np.save("data/exp5/horizons.npy", horizons)
-np.save("data/exp5/horizons_time.npy", horizons_time)
+np.save("data/exp6/horizons.npy", horizons)
+np.save("data/exp6/horizons_time.npy", horizons_time)
 
-np.save("data/exp5/scores_simple.npy", scores_simple)
-np.save("data/exp5/scores_double.npy", scores_double)
+np.save("data/exp6/scores_simple.npy", scores_simple)
+np.save("data/exp6/scores_double.npy", scores_double)
 
 # ==========================
 # plot
@@ -96,7 +96,7 @@ plt.legend(
 plt.grid(alpha=0.3)
 
 plt.savefig(
-    "plots/exp5/predictability_comparison.png",
+    "plots/exp6/predictability_comparison.png",
     dpi=300,
     bbox_inches="tight"
 )
