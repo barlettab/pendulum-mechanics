@@ -16,8 +16,8 @@ from core.divergence import divergence
 # ==========================
 # criar pastas
 # ==========================
-os.makedirs("data/exp3", exist_ok=True)
-os.makedirs("plots/exp3", exist_ok=True)
+os.makedirs("data/exp4", exist_ok=True)
+os.makedirs("plots/exp4", exist_ok=True)
 
 # ==========================
 # simulações
@@ -33,11 +33,11 @@ theta1_B, theta2_B = B
 # ==========================
 # salvar dados
 # ==========================
-np.save("data/exp3/theta1_A.npy", theta1_A)
-np.save("data/exp3/theta2_A.npy", theta2_A)
+np.save("data/exp4/theta1_A.npy", theta1_A)
+np.save("data/exp4/theta2_A.npy", theta2_A)
 
-np.save("data/exp3/theta1_B.npy", theta1_B)
-np.save("data/exp3/theta2_B.npy", theta2_B)
+np.save("data/exp4/theta1_B.npy", theta1_B)
+np.save("data/exp4/theta2_B.npy", theta2_B)
 
 # ==========================
 # calcular divergência
@@ -56,7 +56,7 @@ plt.ylabel("Distância Angular (rad)")
 plt.title("Divergência entre Trajetórias no Pêndulo Duplo")
 
 plt.savefig(
-    "plots/exp3/butterfly_divergence.png",
+    "plots/exp4/butterfly_divergence.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -77,7 +77,7 @@ plt.ylabel("Log da Distância Angular (rad)")
 plt.title("Divergência Exponencial (Escala em log)")
 
 plt.savefig(
-    "plots/exp3/butterfly_log_divergence.png",
+    "plots/exp4/butterfly_log_divergence.png",
     dpi=300,
     bbox_inches="tight"
 )

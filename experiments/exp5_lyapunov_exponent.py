@@ -12,8 +12,12 @@ import matplotlib.pyplot as plt
 
 from core.divergence import divergence
 
+# saídas do experimento
+os.makedirs("data/exp5", exist_ok=True)
+os.makedirs("plots/exp5", exist_ok=True)
+
 # ==========================
-# carregar dados do exp4
+# carregar dados do exp4 (dependência)
 # ==========================
 
 theta1_A = np.load("data/exp4/theta1_A.npy")
